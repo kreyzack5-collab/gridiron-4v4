@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10162b">
+  <title>World Clock</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div>
+        <p class="eyebrow">A little time, everywhere</p>
+        <h1>World Clock</h1>
+        <p class="subtitle">The current time around the world, at a glance.</p>
+      </div>
+      <div class="utc-card" aria-label="Current UTC time">
+        <span class="utc-label">UTC</span>
+        <time id="utc-time">--:--:--</time>
+        <span id="utc-date">Loading date…</span>
+      </div>
+    </header>
+
+    <section class="toolbar" aria-label="Add a time zone">
+      <label for="timezone-select">Add a city</label>
+      <select id="timezone-select">
+        <option value="">Choose a time zone…</option>
+      </select>
+      <button id="add-city" type="button">Add city</button>
+      <span id="message" role="status" aria-live="polite"></span>
+    </section>
+
+    <section id="clocks" class="clock-grid" aria-label="Selected city clocks"></section>
+    <footer>Times are shown in your browser’s selected language and update every second.</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
