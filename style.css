@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #081b2b;
+  --panel: rgba(13, 27, 42, 0.92);
+  --panel-line: rgba(255, 255, 255, 0.18);
+  --grass-1: #1d7a3a;
+  --grass-2: #1e5d32;
+  --field-line: rgba(255, 255, 255, 0.7);
+  --blue: #2f6bff;
+  --blue-dark: #183ca9;
+  --red: #ef4444;
+  --red-dark: #b91c1c;
+  --gold: #facc15;
+  --text: #edf6ff;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top, #0f2742 0%, var(--bg) 50%);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+}
+
+.page-shell {
+  width: min(1020px, calc(100vw - 32px));
+  padding: 18px 18px 12px;
+  border-radius: 20px;
+  background: rgba(10, 19, 30, 0.9);
+  border: 1px solid var(--panel-line);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #b7d6ff;
+  font-size: 11px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: 0.04em;
+}
+
+.scoreboard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--panel-line);
+  border-radius: 14px;
+}
+
+.team-score {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  font-weight: 700;
+}
+
+.team-score.blue {
+  color: #bfcfff;
+}
+
+.team-score.red {
+  color: #ffd1d1;
+}
+
+.team-name {
+  font-size: 0.7em;
+  opacity: 0.9;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.separator {
+  font-size: 2rem;
+  font-weight: 800;
+  opacity: 0.8;
+}
+
+.game-wrap {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.04);
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(180deg, var(--grass-1), var(--grass-2));
+}
+
+.controls-panel {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  color: #dfeaff;
+  font-size: 0.96rem;
+}
+
+.controls-panel p {
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+strong {
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .controls-panel {
+    gap: 10px;
+    font-size: 0.85rem;
+  }
+}

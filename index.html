@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Football Legends</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Arcade match</p>
+          <h1>Football Legends</h1>
+        </div>
+        <div class="scoreboard">
+          <div class="team-score blue">
+            <span class="team-name">Blue</span>
+            <span id="blueScore">0</span>
+          </div>
+          <div class="separator">:</div>
+          <div class="team-score red">
+            <span id="redScore">0</span>
+            <span class="team-name">Red</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="game-wrap">
+        <canvas id="gameCanvas" width="960" height="540"></canvas>
+      </main>
+
+      <aside class="controls-panel">
+        <p><strong>Move</strong>: WASD</p>
+        <p><strong>Tackle</strong>: Q</p>
+        <p><strong>Goal</strong>: Take the ball into the red end zone</p>
+      </aside>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
